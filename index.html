@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrowBuddy – Child Growth & Care Monitoring</title>
+    <link rel="stylesheet" href="growbuddy.css">
+</head>
+
+<body>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>GrowBuddy 👶</h1>
+            <p>Track • Monitor • Support Child Growth & Development</p>
+
+            <div class="hero-stats">
+                <div>
+                    <h3 id="childAge">0</h3>
+                    <span>Age (Months)</span>
+                </div>
+                <div>
+                    <h3 id="heightValue">0 cm</h3>
+                    <span>Height</span>
+                </div>
+                <div>
+                    <h3 id="weightValue">0 kg</h3>
+                    <span>Weight</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="top-nav">
+        <a href="#growth">Growth</a>
+        <a href="#milestones">Milestones</a>
+        <a href="#vaccination">Vaccination</a>
+        <a href="#records">Records</a>
+    </nav>
+
+    <main class="container">
+
+        <!-- Growth Tracking -->
+        <section id="growth" class="card">
+            <h2>Child Growth Tracking</h2>
+
+            <div class="form-grid">
+                <div>
+                    <label>Child Age (Months)</label>
+                    <input type="number" id="ageInput" placeholder="Enter age">
+                </div>
+
+                <div>
+                    <label>Height (cm)</label>
+                    <input type="number" id="heightInput" placeholder="Enter height">
+                </div>
+
+                <div>
+                    <label>Weight (kg)</label>
+                    <input type="number" id="weightInput" placeholder="Enter weight">
+                </div>
+
+                <div>
+                    <label>Record Date</label>
+                    <input type="date" id="growthDate">
+                </div>
+            </div>
+
+            <button id="addGrowthBtn" class="primary-btn">Add Growth Record</button>
+        </section>
+
+        <!-- Milestones -->
+        <section id="milestones" class="card">
+            <h2>Developmental Milestones</h2>
+
+            <div class="form-grid">
+                <div>
+                    <label>Milestone Title</label>
+                    <input type="text" id="milestoneTitle" placeholder="e.g. First Steps">
+                </div>
+
+                <div>
+                    <label>Description</label>
+                    <input type="text" id="milestoneDesc" placeholder="Short description">
+                </div>
+
+                <div>
+                    <label>Date Achieved</label>
+                    <input type="date" id="milestoneDate">
+                </div>
+            </div>
+
+            <button id="addMilestoneBtn" class="primary-btn">Add Milestone</button>
+        </section>
+
+        <!-- Vaccination -->
+        <section id="vaccination" class="card highlight">
+            <h2>Vaccination Schedule</h2>
+
+            <div class="form-grid">
+                <div>
+                    <label>Vaccine Name</label>
+                    <input type="text" id="vaccineName" placeholder="e.g. Polio">
+                </div>
+
+                <div>
+                    <label>Due Date</label>
+                    <input type="date" id="vaccineDate">
+                </div>
+
+                <div>
+                    <label>Status</label>
+                    <select id="vaccineStatus">
+                        <option value="Pending">Pending</option>
+                        <option value="Completed">Completed</option>
+                    </select>
+                </div>
+            </div>
+
+            <button id="addVaccineBtn" class="primary-btn">Add Vaccination</button>
+        </section>
+
+        <!-- Records -->
+        <section id="records" class="card">
+            <h2>Child Records Overview</h2>
+
+            <h3>Growth Records</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Age (Months)</th>
+                        <th>Height (cm)</th>
+                        <th>Weight (kg)</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody id="growthTable"></tbody>
+            </table>
+
+            <h3>Milestone Records</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Milestone</th>
+                        <th>Description</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody id="milestoneTable"></tbody>
+            </table>
+
+            <h3>Vaccination Records</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Vaccine</th>
+                        <th>Due Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="vaccineTable"></tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div>
+            <h3>GrowBuddy</h3>
+            <p>Supporting Healthy Child Growth & Development</p>
+        </div>
+        <p>© 2026 GrowBuddy | Front-End Web Development Project</p>
+    </footer>
+
+    <script src="growbuddy.js"></script>
+</body>
+</html>
